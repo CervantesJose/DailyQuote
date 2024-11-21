@@ -20,7 +20,7 @@ class QuoteViewModel: ObservableObject {
     }
     
     func fetchQuote() {
-        networkService.fetch()
+        networkService.fetch(type: [Quote].self)
             .sink(receiveCompletion: { completion in
                 switch completion {
                 case .failure(let error):
@@ -29,7 +29,7 @@ class QuoteViewModel: ObservableObject {
                     break
                 }
             }, receiveValue: { [weak self] quote in
-                self?.quote = quote
+                self?.quote = quote.randomElement()
             })
             .store(in: &cancellables)
     }

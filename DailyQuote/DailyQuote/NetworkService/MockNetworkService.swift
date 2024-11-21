@@ -9,11 +9,19 @@ import Combine
 import Foundation
 
 class MockNetworkService: NetworkServiceProtocol {
-    var result: Result<Quote, Error> = .failure(URLError(.notConnectedToInternet))
+    var result: Result<Any, Error> = .failure(URLError(.notConnectedToInternet))
     
-    func fetch() -> AnyPublisher<Quote, Error> {
-        return result
-            .publisher
-            .eraseToAnyPublisher()
+    func fetch<T: Codable>(type: T.Type) -> AnyPublisher<T, Error> {
+        switch result {
+        case .success(let success):
+            guard let data = success as? T else {
+                return Fail(error: URLError(.cannotDecodeContentData)).eraseToAnyPublisher()
+            }
+            return Just(data)
+                .setFailureType(to: Error.self)
+                .eraseToAnyPublisher()
+        case .failure(let failure):
+            return Fail(error: failure).eraseToAnyPublisher()
+        }
     }
 }

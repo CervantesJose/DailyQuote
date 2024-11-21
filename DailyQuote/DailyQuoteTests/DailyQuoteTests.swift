@@ -31,7 +31,7 @@ final class DailyQuoteViewModelTests: XCTestCase {
     func testFetchQuote_Success() {
         // Arrange
         let expectedQuote = Quote(q: "To test.. or not to test", a: "William Swiftspear")
-        mockService.result = .success(expectedQuote)
+        mockService.result = .success([expectedQuote])
         
         // Act
         let expectaction = XCTestExpectation(description: "Fetch quote success")

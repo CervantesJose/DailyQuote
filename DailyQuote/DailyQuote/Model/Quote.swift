@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Quote: Decodable, Identifiable {
+struct Quote: Codable, Identifiable {
     var id: String { q }
     var q: String
     var a: String
