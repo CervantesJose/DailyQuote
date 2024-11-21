@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		7A18D60A2CEFBFCA00C11A69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A18D5C02CEFB6B500C11A69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A18D5C72CEFB6B500C11A69;
+			remoteInfo = DailyQuote;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7A18D5C82CEFB6B500C11A69 /* DailyQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A18D6062CEFBFCA00C11A69 /* DailyQuoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyQuoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = DailyQuote;
 			sourceTree = "<group>";
 		};
+		7A18D6072CEFBFCA00C11A69 /* DailyQuoteTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DailyQuoteTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7A18D5C52CEFB6B500C11A69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A18D6032CEFBFCA00C11A69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				7A18D5CA2CEFB6B500C11A69 /* DailyQuote */,
+				7A18D6072CEFBFCA00C11A69 /* DailyQuoteTests */,
 				7A18D5C92CEFB6B500C11A69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				7A18D5C82CEFB6B500C11A69 /* DailyQuote.app */,
+				7A18D6062CEFBFCA00C11A69 /* DailyQuoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 7A18D5C82CEFB6B500C11A69 /* DailyQuote.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7A18D6052CEFBFCA00C11A69 /* DailyQuoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A18D60C2CEFBFCA00C11A69 /* Build configuration list for PBXNativeTarget "DailyQuoteTests" */;
+			buildPhases = (
+				7A18D6022CEFBFCA00C11A69 /* Sources */,
+				7A18D6032CEFBFCA00C11A69 /* Frameworks */,
+				7A18D6042CEFBFCA00C11A69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A18D60B2CEFBFCA00C11A69 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				7A18D6072CEFBFCA00C11A69 /* DailyQuoteTests */,
+			);
+			name = DailyQuoteTests;
+			packageProductDependencies = (
+			);
+			productName = DailyQuoteTests;
+			productReference = 7A18D6062CEFBFCA00C11A69 /* DailyQuoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					7A18D5C72CEFB6B500C11A69 = {
 						CreatedOnToolsVersion = 16.0;
+					};
+					7A18D6052CEFBFCA00C11A69 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 7A18D5C72CEFB6B500C11A69;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				7A18D5C72CEFB6B500C11A69 /* DailyQuote */,
+				7A18D6052CEFBFCA00C11A69 /* DailyQuoteTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7A18D5C62CEFB6B500C11A69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A18D6042CEFBFCA00C11A69 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A18D6022CEFBFCA00C11A69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A18D60B2CEFBFCA00C11A69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A18D5C72CEFB6B500C11A69 /* DailyQuote */;
+			targetProxy = 7A18D60A2CEFBFCA00C11A69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7A18D5D42CEFB6B600C11A69 /* Debug */ = {
@@ -302,6 +377,42 @@
 			};
 			name = Release;
 		};
+		7A18D60D2CEFBFCA00C11A69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8D2KHY3885;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elder.DailyQuoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyQuote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyQuote";
+			};
+			name = Debug;
+		};
+		7A18D60E2CEFBFCA00C11A69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8D2KHY3885;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elder.DailyQuoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyQuote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyQuote";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +430,15 @@
 			buildConfigurations = (
 				7A18D5D72CEFB6B600C11A69 /* Debug */,
 				7A18D5D82CEFB6B600C11A69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A18D60C2CEFBFCA00C11A69 /* Build configuration list for PBXNativeTarget "DailyQuoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A18D60D2CEFBFCA00C11A69 /* Debug */,
+				7A18D60E2CEFBFCA00C11A69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
